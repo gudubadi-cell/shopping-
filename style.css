@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Arial Black', sans-serif; overflow: hidden; }
+
+.page-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Fallback */
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    color: white;
+}
+
+.welcome-scroll {
+    font-size: 18px;
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.thank-you-text {
+    font-size: 40px;
+    color: #2ecc71;
+    line-height: 1.2;
+}
+
+.hidden { display: none; }
+.btn { display: block; width: 100%; padding: 15px; margin: 10px 0; border: none; background: #e67e22; color: white; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; transition: 0.3s; }
+.btn:hover { background: #d35400; }
+.secondary { background: #7f8c8d; }
+
+input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; }
+.star-rating { direction: rtl; font-size: 40px; }
+.star-rating input { display: none; }
+.star-rating label { color: #555; cursor: pointer; }
+.star-rating input:checked ~ label { color: #f1c40f; }
+
+#reviewContainer img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #f1c40f; margin-bottom: 15px; }

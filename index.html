@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Rating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home-page" class="page-container">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-pizza-on-a-wooden-table-3136-large.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <marquee class="welcome-scroll">WELCOME TO OUR STORE AND WE HOPE OUR SERVICE AND OUR FOOD SATISFIED YOU .</marquee>
+            
+            <h1>Our Store</h1>
+            <div class="button-group">
+                <button onclick="showPage('rating-page')" class="btn">RATING</button>
+                <button onclick="showReviewPage()" class="btn">REVIEW</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="rating-page" class="page-container hidden">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-bubbles-of-water-in-slow-motion-23000-large.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h2>Submit Your Rating</h2>
+            <form id="ratingForm">
+                <div class="star-rating">
+                    <input type="radio" name="stars" id="star5" value="5"><label for="star5">★</label>
+                    <input type="radio" name="stars" id="star4" value="4"><label for="star4">★</label>
+                    <input type="radio" name="stars" id="star3" value="3"><label for="star3">★</label>
+                    <input type="radio" name="stars" id="star2" value="2"><label for="star2">★</label>
+                    <input type="radio" name="stars" id="star1" value="1"><label for="star1">★</label>
+                </div>
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <input type="url" id="instaLink" placeholder="Instagram Profile Link" required>
+                <label style="display:block; margin-top:10px;">Upload Selfie:</label>
+                <input type="file" id="selfie" accept="image/*" required>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" onclick="showPage('home-page')" class="btn secondary">Back</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="thank-you-page" class="page-container hidden">
+        <div class="content">
+            <h1 class="thank-you-text">THANK YOU<br>VISIT AGAIN</h1>
+            <button onclick="showPage('home-page')" class="btn">Return Home</button>
+        </div>
+    </div>
+
+    <div id="review-page" class="page-container hidden">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-beans-falling-in-slow-motion-44473-large.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h2>Customer Review</h2>
+            <div id="reviewContainer"></div>
+            <button onclick="showPage('home-page')" class="btn">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
